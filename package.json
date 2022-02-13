@@ -1,0 +1,11 @@
+{
+  "name": "haader-be",
+  "version": "1.0.0",
+  "description": "Search and get the results from each supplier and merge the data together to get hotels in one response.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "MohammedDawood",
+  "license": "ISC"
+}
