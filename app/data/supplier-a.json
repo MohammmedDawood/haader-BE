@@ -1,0 +1,31 @@
+[{
+        "Hotel": "Dubai International Terminal Hotel",
+        "Rate": 5,
+        "Fare": 3306,
+        "roomAmenities": "Safety Deposit Box,Meeting Rooms,Air Conditioning,Business Center,Concierge,Elevators,Foreign Currency Exchange,Sauna"
+    },
+    {
+        "Hotel": "Media Rotana Dubai",
+        "Rate": 5,
+        "Fare": 1307,
+        "roomAmenities": "Air Conditioning,Business Center,Concierge,Elevators,Foreign Currency Exchange,Sauna"
+    },
+    {
+        "Hotel": "Queen's Hotel",
+        "Rate": 2,
+        "Fare": 881,
+        "roomAmenities": "Restaurant,Laundry Service,Tour Desk,Multilingual Staff,Doctor On Call"
+    },
+    {
+        "Hotel": "Icon Hotel Apartments",
+        "Rate": 3,
+        "Fare": 1048,
+        "roomAmenities": "Business Center,Concierge,Elevators,Foreign Currency Exchange,Sauna"
+    },
+    {
+        "Hotel": "Dubai International Terminal Hotel",
+        "Rate": 3,
+        "Fare": 1114,
+        "roomAmenities": "Spa,Kids Pool,Gymnasium,Swimming Pool - Outdoor,Restaurant"
+    }
+]

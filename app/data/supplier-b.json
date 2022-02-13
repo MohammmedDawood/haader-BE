@@ -1,0 +1,33 @@
+[{
+        "hotelName": "Kempinski Nile Hotel Garden City",
+        "Rate": "*****",
+        "Price": 9219,
+        "amenities": ["Safety Deposit Box", "Meeting Rooms", "Air Conditioning", "Business Center", "Concierge", "Elevators", "Foreign Currency Exchange", "Sauna"]
+    },
+    {
+        "hotelName": "Le Sphinx Hotel",
+        "Rate": "*****",
+        "Price": 9234,
+        "discount": 10,
+        "amenities": ["Air Conditioning", "Business Center", "Concierge", "Elevators", "Foreign Currency Exchange", "Sauna"]
+    },
+    {
+        "hotelName": "Queen's Hotel",
+        "Rate": "***",
+        "Price": 2345,
+        "amenities": ["Restaurant", "Laundry Service", "Tour Desk", "Multilingual Staff", "Doctor On Call"]
+    },
+    {
+        "hotelName": "Holiday Inn",
+        "Rate": "****",
+        "Price": 4450,
+        "discount": 120,
+        "amenities": ["Business Center", "Concierge,Elevators", "Foreign Currency Exchange", "Sauna"]
+    },
+    {
+        "hotelName": "Al Masah Hotel And Spa",
+        "Rate": "**",
+        "Price": 3100,
+        "amenities": ["Spa", "Kids Pool", "Gymnasium", "Swimming Pool - Outdoor", "Restaurant"]
+    }
+]

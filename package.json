@@ -1,11 +1,25 @@
 {
   "name": "haader-be",
   "version": "1.0.0",
-  "description": "Search and get the results from each supplier and merge the data together to get hotels in one response.",
-  "main": "index.js",
+  "description": "Doctor appointment system calender.",
+  "main": "Index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index",
+    "server": "nodemon index"
   },
   "author": "MohammedDawood",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.2",
+    "mongoose": "^6.2.1",
+    "morgan": "^1.10.0",
+    "path": "^0.12.7"
+  }
 }
