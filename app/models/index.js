@@ -3,6 +3,9 @@ const dbConfig = require("../config/db.config.js");
 const mongoose = require("mongoose");
 mongoose.Promise = global.Promise;
 
+//stop mongoose from adding S to name of collection.
+mongoose.pluralize(null);
+
 const db = {};
 db.mongoose = mongoose;
 db.url = dbConfig.url;

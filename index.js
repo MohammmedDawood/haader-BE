@@ -5,7 +5,6 @@ const colors = require("colors");
 const path = require("path");
 const morgan = require("morgan");
 const cors = require("cors");
-const { json } = require("body-parser");
 
 dotenv.config({ path: "./config.env" });
 
@@ -53,6 +52,7 @@ app.get("/", (req, res) => res.json({ application_name: "Hotel Inventory" }));
 
 // app routes
 require("./app/routes/supplier-a.route")(app);
+require("./app/routes/supplier-b.route")(app);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 3000;

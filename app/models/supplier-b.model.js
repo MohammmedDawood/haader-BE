@@ -16,8 +16,13 @@ const supplier_b_Model = mongoose.Schema(
       default: 0,
       required: [true, "Price Not Found"],
     },
+    discount: {
+      type: Number,
+      default: 0,
+      required: [true, "discount Not Found"],
+    },
     amenities: {
-      type: String,
+      type: Array,
       required: [true, "amenities Not Found"],
     },
     createdAt: {
@@ -31,6 +36,6 @@ const supplier_b_Model = mongoose.Schema(
 );
 
 module.exports = (mongoose) => {
-  const Supplier_b_Model = mongoose.model("Supplier_b_Model", supplier_b_Model);
+  const Supplier_b_Model = mongoose.model("supplier_b", supplier_b_Model);
   return Supplier_b_Model;
 };

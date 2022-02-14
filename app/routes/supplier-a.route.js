@@ -1,20 +1,14 @@
 module.exports = (app) => {
-  const users = require("../controllers/supplier-a.controller.js");
+  const supplier_a = require("../controllers/supplier-a.controller.js");
 
   var router = require("express").Router();
 
   // Create a new store
-  router.post("/create_user", users.createuser);
+  router.post("/create_supplier_a", supplier_a.createSupplier_a);
 
   // Retrieve all stores
-  router.get("/get_users_all", users.findAllUsers);
-
-  // Update a store with id
-  router.put("/update_user_by_id/:id", users.updateUserById);
-
-  // Delete a store with id
-  router.delete("/delete_user_by_id/:id", users.deleteUserById);
+  router.get("/get_supplier_a_all", supplier_a.findAllSupplier_a);
 
   // export router to app
-  app.use("/api/users", router);
+  app.use("/api/supplier_a", router);
 };

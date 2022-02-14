@@ -1,15 +1,15 @@
 const db = require("../models");
-const Users = db.users;
+const Supplier_a = db.supplier_a_model;
 
 // Create and Save a new User
 
-exports.createuser = (req, res) => {
+exports.createSupplier_a = (req, res) => {
   // Validate request
   if (
-    !req.body.name ||
-    !req.body.email ||
-    !req.body.password ||
-    !req.body.phone
+    !req.body.Hotel ||
+    !req.body.Rate ||
+    !req.body.Fare ||
+    !req.body.roomAmenities
   ) {
     res.status(400).send({
       message: "Somthing is missing!",
@@ -18,86 +18,40 @@ exports.createuser = (req, res) => {
     return;
   }
 
-  // Create a new user
-  var user = new Users({
-    name: req.body.name,
-    email: req.body.email,
-    phone: req.body.phone,
-    password: req.body.password,
-    address: req.body.address,
-    role: req.body.role,
+  // Create a new supplier_a
+  var supplier_a = new Supplier_a({
+    Hotel: req.body.Hotel,
+    Rate: req.body.Rate,
+    Fare: req.body.Fare,
+    roomAmenities: req.body.roomAmenities,
   });
 
-  // Save Users in the database
-  user
-    .save(user)
+  // Save Supplier_a in the database
+  supplier_a
+    .save(supplier_a)
     .then((data) => {
       res.status(200).send(data);
     })
     .catch((err) => {
       res.status(500).send({
-        message: err.message || "Some error occurred while creating the User.",
+        message:
+          err.message || "Some error occurred while creating the supplier_a.",
       });
     });
 };
 
-// Retrieve all Users from the database.
-exports.findAllUsers = (req, res) => {
+// Retrieve all supplier_a from the database.
+exports.findAllSupplier_a = (req, res) => {
   var condition = {};
 
-  Users.find(condition)
+  Supplier_a.find(condition)
     .then((data) => {
       res.status(200).send(data);
     })
     .catch((err) => {
       res.status(500).send({
-        message: err.message || "Some error occurred while retrieving stores.",
-      });
-    });
-};
-
-// Update a user by the id in the request
-exports.updateUserById = (req, res) => {
-  let id = req.query.id;
-  Users.findByIdAndUpdate(id, req.body, {
-    useFindAndModify: false,
-  })
-    .then((data) => {
-      if (!data) {
-        res.status(404).send({
-          message: `Cannot update User with id=${id}. Maybe User was not found!`,
-        });
-      } else
-        res.status(200).send({
-          message: "Users was updated successfully.",
-        });
-    })
-    .catch((err) => {
-      res.status(500).send({
-        message: "Error updating Users with id",
-      });
-    });
-};
-
-// Delete a user with the specified id in the request
-exports.deleteUserById = (req, res) => {
-  const id = req.query.id;
-
-  Users.findByIdAndRemove(id)
-    .then((data) => {
-      if (!data) {
-        res.status(404).send({
-          message: `Cannot delete User with id=${id}. Maybe User was not found!`,
-        });
-      } else {
-        res.status(200).send({
-          message: "User was deleted successfully!",
-        });
-      }
-    })
-    .catch((err) => {
-      res.status(500).send({
-        message: "Could not delete User with id",
+        message:
+          err.message || "Some error occurred while retrieving supplier_a.",
       });
     });
 };
